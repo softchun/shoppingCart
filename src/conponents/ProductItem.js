@@ -36,7 +36,7 @@ function ProductItem({product}) {
                     <h1 className="flex-auto font-medium text-gray-900">
                         {product.title}
                     </h1>
-                    <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-violet-600">
+                    <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-indigo-800">
                         $ {product.price}
                     </div>
                     {product.inStock? 
@@ -58,21 +58,23 @@ function ProductItem({product}) {
                 <div className="flex space-x-4 mb-3 text-sm font-medium">
                     <div className="flex-auto flex space-x-4">
                         <button
-                            className="h-10 px-6 font-semibold rounded-full bg-violet-600 hover:bg-violet-500 text-white"
+                            className={`h-10 px-6 font-semibold rounded-full text-white ${product.inStock? 'bg-indigo-800 hover:bg-indigo-800': 'bg-slate-300'}`}
                             type='button'
                             onClick={handleBuyNow}
+                            disabled={product.inStock===false}
                         >
                             Buy now
                         </button>
                         <button
-                            className="h-10 px-6 font-semibold rounded-full border border-gray-200 text-gray-900 hover:bg-slate-100"
+                            className={`h-10 px-6 font-semibold rounded-full border border-gray-200 text-gray-900  ${product.inStock? 'hover:bg-slate-100': 'bg-gray-200'}`}
                             type='button'
                             onClick={handleAddToCart}
+                            disabled={product.inStock===false}
                         >
                             Add to bag
                         </button>
                     </div>
-                    <button className="flex-none flex items-center justify-center w-9 h-9 rounded-full text-violet-600 bg-violet-50" type="button" aria-label="Like">
+                    <button className="flex-none flex items-center justify-center w-9 h-9 rounded-full text-indigo-800 bg-indigo-50" type="button" aria-label="Like">
                         <svg width="20" height="20" fill="currentColor" aria-hidden="true">
                             <path fillRule="evenodd" clipRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                         </svg>

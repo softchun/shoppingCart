@@ -22,7 +22,7 @@ const MOCK_DATA_PRODUCTS = [
         id: 3,
         title: "ASOS DESIGN baggy jeans in red",
         size: ["S","M","L","XL"],
-        inStock: true,
+        inStock: false,
         price: 45,
         image: "http://images.asos-media.com/products/asos-design-baggy-jeans-in-red/200290256-1-red"
     },
@@ -70,7 +70,7 @@ const MOCK_DATA_PRODUCTS = [
         id: 9,
         title: "River Island suede mules in gray",
         size: ["7","7.5","8","8.5","9","9.5","10","10.5","11","12","13","14"],
-        inStock: true,
+        inStock: false,
         price: 70,
         image: "http://images.asos-media.com/products/river-island-suede-mules-in-gray/201367519-1-grey"
     },
