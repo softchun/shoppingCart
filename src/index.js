@@ -3,10 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { devToolsEnhancer } from 'redux-devtools-extension'
+import { cartReducer } from './reducers/cartReducer'
+
+const store = createStore(cartReducer, devToolsEnhancer())
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+        <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
