@@ -1,12 +1,5 @@
 import { ADD_TO_CART, DELETE_CART, REMOVE_ONE } from '../actions/cartActions'
 
-// {
-//   id: '',
-//   title: '',
-//   price: 2,
-//   quantity: 1
-// }
-
 const initialState = {
     cart: [],
 }

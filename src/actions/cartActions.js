@@ -2,17 +2,6 @@ export const ADD_TO_CART = 'ADD_TO_CART'
 export const DELETE_CART = 'DELETE_CART'
 export const REMOVE_ONE = 'REMOVE_ONE'
 
-// const action = {
-//   type: '',
-//   payload: {
-//     id: '',
-//     title: '',
-//     price: 2,
-//     quantity: 1,
-//   },
-// }
-
-// Action creators
 export function addToCart(addedProduct) {
     return {
         type: ADD_TO_CART,
