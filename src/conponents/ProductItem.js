@@ -58,7 +58,7 @@ function ProductItem({product}) {
                 <div className="flex space-x-4 mb-3 text-sm font-medium">
                     <div className="flex-auto flex space-x-4">
                         <button
-                            className={`h-10 px-6 font-semibold rounded-full text-white ${product.inStock? 'bg-indigo-800 hover:bg-indigo-800': 'bg-slate-300'}`}
+                            className={`h-10 px-6 font-semibold rounded-full text-white ${product.inStock? 'bg-indigo-800 hover:bg-indigo-800': 'bg-gray-200'}`}
                             type='button'
                             onClick={handleBuyNow}
                             disabled={product.inStock===false}
